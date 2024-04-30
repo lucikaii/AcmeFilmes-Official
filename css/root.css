@@ -1,0 +1,15 @@
+:root{
+
+    /* COLOURS */
+    --black: #000000;
+    --gray: #060606;
+    --purple: #740FC6;
+    --white: #FFFFFF;
+    --red: #DE0000;
+    --green: #008305;
+
+    /* FONTS */
+
+    --inria: 'Inria Sans', sans-serif;
+    --fredoka: "Fredoka", sans-serif;
+}
