@@ -4,7 +4,7 @@ body{
     background: var(--black);
     display: grid;
 }
-.signin-box{
+.signup-box{
     height: 70%;
     width: 65%;
     background: var(--gray);
@@ -29,7 +29,7 @@ form{
     justify-self: center;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
 }
 .input-box{
     height: 50px;
@@ -60,7 +60,7 @@ input{
 input::placeholder{
     color: var(--white);
 }
-.signup-message{
+.signin-message{
     display: flex;
     gap: 5px;
     justify-self: center;
