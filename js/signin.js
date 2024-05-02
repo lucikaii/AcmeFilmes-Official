@@ -40,6 +40,7 @@ const validateSignin = async function(){
             if(user.adm == 0){
 
                 alert('usuario padrão')
+                window.location.href = '../pages/home.html'
             } else if (user.adm == 1){
 
                 alert('usuario administrador')

@@ -1,0 +1,121 @@
+header{
+    height: 100px;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+}
+.nav-island{
+    height: 60px;
+    width: 65%;
+    background-color: var(--black);
+    border-radius: 8px;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-content: space-between;
+}
+.logo{
+    height: 40px;
+    width: 178px;
+}
+.search{
+    height: 30px;
+    width: 30px;
+}
+.profile-photo{
+    height: 40px;
+    width: 40px;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk2mffl9npq7aJGfNhwJFN6hYblGP6kCChfOd5hW7DvA&s);
+    background-size: cover;
+    border-radius: 50%;
+}
+li{
+    display: block;
+    position: relative;
+}
+li a{
+    display: block;
+    color: var(--white);
+    padding: 15px 20px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 24px;
+    font-family: var(--fredoka);
+}
+li a:hover{
+    background: var(--white);
+    color: var(--black);
+}
+li ul.dropdown li{
+    display: block;
+}
+li ul.dropdown{
+    width: 100%;
+    background: var(--black);
+    position: absolute;
+    z-index: 999;
+    display: none;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    overflow: hidden;
+}
+li:hover ul.dropdown{
+    display: block;
+}
+li ul.dropdown-mega li{
+    display: block;
+}
+li ul.dropdown-mega{
+    width: 445%;
+    background: var(--black);
+    position: absolute;
+    z-index: 999;
+    display: none;
+    justify-content: space-between;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    overflow: hidden;
+}
+li:hover ul.dropdown-mega{
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+.classification{
+    display: flex;
+}
+.classification-icon{
+    height: 24px;
+    width: 24px;
+    border-radius: 4px;
+}
+p{
+    padding-left: 1px;
+    font-size: 10px;
+}
+.input-area{
+    height: 30px;
+    width: 250px;
+    border: 2px solid var(--purple);
+    border-radius: 8px;
+    padding-right: 5px;
+    overflow: hidden;
+}
+input{
+    height: 100%;
+    width: 90%;
+    border: 0;
+    outline: none;
+    background: transparent;
+    padding-left: 5px;
+    color: var(--white);
+    font-family: var(--inria);
+}
+.bi-search{
+    cursor: pointer;
+    color: var(--white);
+}

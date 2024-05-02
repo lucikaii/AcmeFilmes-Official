@@ -3,6 +3,7 @@ body{
     width: 100vw;
     background: var(--black);
     display: grid;
+    overflow: hidden;
 }
 .signup-box{
     height: 70%;
