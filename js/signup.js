@@ -52,10 +52,10 @@ signupButton.addEventListener('click', userSignup)
 // Toast
 
 
-const showbutton = document.getElementById('show')
 const closebutton = document.getElementById('close')
 let x
 let toast = document.getElementById('toast')
+let errorToast = document.getElementById('error-toast')
 
 const showToast = function(){
     clearTimeout(x)
