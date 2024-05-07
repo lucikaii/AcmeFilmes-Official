@@ -47,17 +47,31 @@ main{
 .movie-table{
     height: 200px;
     width: 100%;
-    background-color: var(--white);
+    background: var(--gray);
     display: grid;
+    border-radius: 30px;
 }
 .cms-movie-card{
     height: 70px;
     width: 70%;
     border: 2px solid var(--purple);
     border-radius: 16px;
+    display: flex;
+    padding-inline: 25px;
     justify-self: center;
+    align-items: center;
+    color: var(--white);
+    font-size: 20px;
+    font-family: var(--inria);
 }
 .cms-movie-card img{
     height: 40px;
     width: 70px;
+    border-radius: 8px;
+}
+span{
+    padding-left: 15px;
+}
+.button-side{
+    justify-self: flex-end;
 }

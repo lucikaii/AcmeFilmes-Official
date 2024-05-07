@@ -3,6 +3,7 @@ body{
     width: 100vw;
     background: var(--black);
     overflow-x: hidden;
+
 }
 main{
     width: 100%;

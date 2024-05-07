@@ -1,15 +1,17 @@
-import { getClassification } from './api_import.js'
+import { getClassifications, getGenders } from './api_import.js'
 
 document.addEventListener('DOMContentLoaded', () => {
 
     const classificationDropdown = document.getElementById('classification-dropdown')
+    const genderDropdown = document.getElementById('gender-dropdown')
 
     fillClassificationCard(classificationDropdown)
+    fillGenderCard(genderDropdown)
 })
 
 const fillClassificationCard = async function(classificationDropdown){
 
-    const classifications = await getClassification()
+    const classifications = await getClassifications()
 
     let ul = document.createElement('ul')
     ul.classList.add('dropdown')
@@ -33,5 +35,24 @@ const fillClassificationCard = async function(classificationDropdown){
 
     classificationDropdown.appendChild(ul)
 
+    })
+}
+
+const fillGenderCard = async function(genderDropdown){
+
+    const genders = await getGenders()
+    let ul = document.createElement('ul')
+    ul.classList.add('dropdown-mega')
+
+    genders.generos.forEach( gender =>{
+
+        let li = document.createElement('li')
+        ul.appendChild(li)
+        let a = document.createElement('a')
+        a.setAttribute('href', '#')
+        a.textContent = `${gender.nome}`
+        li.appendChild(a)
+
+        genderDropdown.appendChild(ul)
     })
 }

@@ -26,9 +26,18 @@ export async function getMovieByName(movieName){
     return data
 }
 
+// IMPORT MOVIE BY CLASSIFICATION 
+
+export async function getMoviesByClassification(id){
+
+    const url = `https://acmefilmes-zhei.onrender.com/v2/acmefilmes/filmes/classificacao/${id}`
+    const response = await fetch(url)
+    const data = await response.json()
+    return data
+}
 // IMPORT CLASSIFICATIONS
 
-export async function getClassification(){
+export async function getClassifications(){
 
     const url = 'https://acmefilmes-zhei.onrender.com/v2/acmefilmes/classificacoes'
     const response = await fetch(url)
@@ -36,6 +45,24 @@ export async function getClassification(){
     return data
 }
 
+// IMPORT GENDERS
+
+export async function getGenders(){
+
+    const url = 'https://acmefilmes-zhei.onrender.com/v2/acmefilmes/generos'
+    const response = await fetch(url)
+    const data = await response.json()
+    return data
+}
+
 // IMPORT ACTORS
+
+export async function getActors(){
+
+    const url = 'https://acmefilmes-zhei.onrender.com/v2/acmefilmes/atores'
+    const response = await fetch(url)
+    const data = await response.json()
+    return data
+}
 
 // IMPORT DIRECTORS

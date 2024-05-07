@@ -83,7 +83,7 @@ li ul.dropdown-mega{
 }
 li:hover ul.dropdown-mega{
     display: flex;
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
 }
 .classification{
     display: flex;

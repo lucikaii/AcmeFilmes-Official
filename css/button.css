@@ -28,3 +28,31 @@
     color: var(--white);
     background: var(--purple);
 }
+.edit-button{
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+    border: 0;
+    border-radius: 8px;
+    color: var(--green);
+    background: transparent;
+    border: 2px solid var(--green);
+}
+.edit-button:hover{
+        background: var(--green);
+        color: var(--white);
+}
+.delete-button{
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+    border: 0;
+    border-radius: 8px;
+    color: var(--red);
+    background: transparent;
+    border: 2px solid var(--red);
+}
+.delete-button:hover{
+    background: var(--red);
+    color: var(--white);
+}

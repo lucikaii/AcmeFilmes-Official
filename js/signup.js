@@ -21,7 +21,8 @@ const userSignup = async function(){
             const _data = {
                 nome: nameInput,
                 email: emailInput,
-                senha: passwordInput
+                senha: passwordInput,
+                adm: 0
             }
 
             const _url = 'https://acmefilmes-zhei.onrender.com/v2/acmefilmes/usuario'
