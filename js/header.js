@@ -32,6 +32,9 @@ const fillClassificationCard = async function(classificationDropdown){
     p.textContent = `${classification.descricao}`
     a.appendChild(icon)
     a.appendChild(p)
+    let idClassification = classification.id
+
+    li.addEventListener('click', console.log(idClassification))
 
     classificationDropdown.appendChild(ul)
 

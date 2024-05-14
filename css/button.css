@@ -56,3 +56,11 @@
     background: var(--red);
     color: var(--white);
 }
+.close-button{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: var(--purple);
+    color: var(--white);
+    border: none;
+}

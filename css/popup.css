@@ -1,0 +1,29 @@
+.popup{
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.705);
+    display: none;
+}
+.popup-grid{
+    height: 100%;
+    width: 100%;
+    display: grid;
+}
+.popup-box{
+    height: 60%;
+    width: 55%;
+    background-color: var(--black);
+    padding: 25px;
+    border-radius: 8px;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+}
+.info-box{
+    display: grid;
+}
