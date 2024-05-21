@@ -7,6 +7,9 @@ body{
 }
 main{
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 .actor-card{
     height: 300px;
@@ -17,10 +20,6 @@ main{
     justify-content: center;
     align-items: center;
     cursor: pointer;
-}
-.actor-card:hover{
-    transform: scale(1.1);
-    transition: 0.5s ease;
 }
 .actor-card img{
     height: 250px;

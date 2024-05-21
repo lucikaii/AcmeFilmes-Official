@@ -27,3 +27,6 @@
 .info-box{
     display: grid;
 }
+.show{
+    display: block;
+}

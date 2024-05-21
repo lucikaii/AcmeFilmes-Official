@@ -26,6 +26,18 @@ export async function getMovieByName(movieName){
     return data
 }
 
+export async function deleteMovie(id){
+
+    const url = `https://acmefilmes-zhei.onrender.com/v2/acmefilmes/filme/${id}`
+    const response = await fetch(url)
+    const data = await response.json()
+    return data
+}
+
+export async function setMovie(dadosMovie){
+    
+}
+
 // IMPORT MOVIE BY CLASSIFICATION 
 
 export async function getMoviesByClassification(id){
