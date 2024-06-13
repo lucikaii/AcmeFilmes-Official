@@ -36,6 +36,35 @@ export async function deleteMovie(id){
 
 export async function setMovie(dadosMovie){
     
+    const url = 'https://acmefilmes-zhei.onrender.com/v2/acmefilmes/filme'
+    const options = {
+        method: 'POST',
+        headers: {
+            'Content-type': 'application/json'
+        },
+        body: JSON.stringify(dadosMovie),
+
+    }
+
+    const response = await fetch (url, options)
+
+    return response.ok
+}
+
+export async function putMovie(dadosMovie, idMovie){
+    const url = `https://acmefilmes-zhei.onrender.com/v2/acmefilmes/update/filme/${idMovie}`
+    const options = {
+        method: 'PUT',
+        headers: {
+            'Content-type': 'application/json'
+        },
+        body: JSON.stringify(dadosMovie),
+
+    }
+
+    const response = await fetch (url, options)
+
+    return response.ok
 }
 
 // IMPORT MOVIE BY CLASSIFICATION 
