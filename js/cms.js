@@ -1,16 +1,20 @@
-import { deleteMovie, getMovies} from "./api_import.js"
+import { deleteMovie, getMovies, getMovie} from "./api_import.js"
 
 document.addEventListener('DOMContentLoaded', () =>{
 
+    document.getElementById('popup').classList.add('sumir')
     const movieTable = document.getElementById('movie-table')
-    fillMovieCard(movieTable)
+    const body = document.querySelector('body')
+    fillMovieCard(movieTable, body)
 })
 
-const fillMovieCard = async function(movieTable){
+const fillMovieCard = async function(movieTable, body){
 
     const movies = await getMovies()
 
     movies.filmes.forEach(movie => {
+
+        let idMovie = movie.id
         
         let movieCard = document.createElement('div')
         movieCard.classList.add('cms-movie-card')
@@ -48,8 +52,31 @@ const fillMovieCard = async function(movieTable){
         movieCard.appendChild(buttonSide)
 
         movieTable.appendChild(movieCard)
-        deleteButton.addEventListener('click', () =>{
-            deleteMovie(movie.id)
+        deleteButton.addEventListener('click', async () =>{
+            deleteMovie(idMovie)
+        })
+        editButton.addEventListener('click', function (){
+
+            console.log(movie);
+
+            document.getElementById('popup').classList.remove('sumir')
+
+            document.getElementById('nome').value = movie.nome
+            document.getElementById('sinopse').value = movie.sinopse
+            document.getElementById('duracao').value = movie.duracao.substring(11 , 19)
+            document.getElementById('data_lancamento').value = movie.data_lancamento.substring(0 , 10)
+            document.getElementById('data_relancamento').value = movie.data_relancamento
+            document.getElementById('valor').value = movie.valor_unitario
+            document.getElementById('classificacao').value = movie.classificacao
+            document.getElementById('foto_capa').value = movie.foto_capa
+
+            if(movie.data_relancamento == null){
+                document.getElementById('data_relancamento').value = "não há data de relançamento"
+            } else {
+                document.getElementById('data_relancamento').value = movie.data_relancamento
+            }
+
+            document.getElementById('photo-movie').style.backgroundImage = `url(${movie.foto_capa})`
         })
 
 

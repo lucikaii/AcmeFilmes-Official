@@ -15,11 +15,31 @@
      <link rel="stylesheet" href="../css/header.css">
      <link rel="stylesheet" href="../css/button.css">
      <link rel="stylesheet" href="../css/cms.css">
+     <link rel="stylesheet" href="../css/popup.css">
      <!-- LINK SCRIPT -->
      <script type="module" src="../js/cms.js" defer></script>
     <title>Acme Filmes | Administrator</title>
 </head>
 <body>
+    <div id="popup" class="popup">
+        <div class="info-box">
+            <input id="nome" type="text" placeholder="Nome">
+            <input id="sinopse" type="text" placeholder="Duração">
+            <input id="duracao" type="text" placeholder="Duração">
+            <input id="data_lancamento" type="text" placeholder="Data de lançamento">
+            <input id="data_relancamento" type="text" placeholder="Data de relançamento">
+            <input id="valor" type="text" placeholder="Valor">
+            <input id="classificacao" type="text" placeholder="Classificação">
+            <input id="foto_capa" type="text" placeholder="Foto da capa">
+            <div class="button-side-popup">
+                <button class="cancel-button">Cancelar</button>
+                <button class="save-button" id="save-button">Salvar</button>
+            </div>
+        </div>
+        <div class="photo-box">
+            <div class="photo-movie" id="photo-movie"></div>
+        </div>
+</div>
     <header>
         <div class="profile-welcome-message" id="profile">
             <img src="../img/howl.jpg" alt="profile-icon" class="profile-icon">
