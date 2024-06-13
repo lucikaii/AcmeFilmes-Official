@@ -1,5 +1,6 @@
-import { deleteMovie, getMovies, getMovie} from "./api_import.js"
+import { deleteMovie, getMovies, getMovie, putMovie} from "./api_import.js"
 
+const newMovieButton = document.getElementById('new-movie-button')
 document.addEventListener('DOMContentLoaded', () =>{
 
     document.getElementById('popup').classList.add('sumir')
@@ -53,7 +54,15 @@ const fillMovieCard = async function(movieTable, body){
 
         movieTable.appendChild(movieCard)
         deleteButton.addEventListener('click', async () =>{
-            deleteMovie(idMovie)
+
+            console.log(idMovie)
+           const response = await deleteMovie(idMovie)
+           if(response){
+            alert('Filme deletado com sucesso')
+            window.location.href = '../pages/cms.html'
+        } else{
+            alert('Erro ao deletar')
+        }
         })
         editButton.addEventListener('click', function (){
 
@@ -61,6 +70,7 @@ const fillMovieCard = async function(movieTable, body){
 
             document.getElementById('popup').classList.remove('sumir')
 
+            document.getElementById('movie-title').textContent = `${movie.nome}`
             document.getElementById('nome').value = movie.nome
             document.getElementById('sinopse').value = movie.sinopse
             document.getElementById('duracao').value = movie.duracao.substring(11 , 19)
@@ -77,6 +87,41 @@ const fillMovieCard = async function(movieTable, body){
             }
 
             document.getElementById('photo-movie').style.backgroundImage = `url(${movie.foto_capa})`
+
+            document.getElementById('cancel-button').addEventListener('click', ()=>{
+                window.location.href = '../pages/cms.html'
+            })
+            document.getElementById('save-button').addEventListener('click', async ()=>{
+
+                let nomeInput = document.getElementById('nome').value
+                let sinopseInput = document.getElementById('sinopse').value
+                let duracaoInput = document.getElementById('duracao').value
+                let datalanInput = document.getElementById('data_lancamento').value
+                let datarelanInput = document.getElementById('data_relancamento').value 
+                let valorInput = document.getElementById('valor').value
+                let classificacaoInput = document.getElementById('classificacao').value
+                let fotoInput = document.getElementById('foto_capa').value
+
+                const movieJson = {
+                    nome: nomeInput,
+                    sinopse: sinopseInput,
+                    duracao: duracaoInput,
+                    data_lancamento: datalanInput,
+                    data_relancamento: datarelanInput,
+                    valor_unitario: valorInput,
+                    classificacao: classificacaoInput,
+                    foto_capa: fotoInput
+                }
+
+                const response = await putMovie(movieJson, idMovie)
+                if(response){
+                    alert('Filme atualizado com sucesso')
+                    window.location.href = '../pages/cms.html'
+                } else{
+                    alert('Erro ao atualizar')
+                }
+            
+            })
         })
 
 
@@ -84,3 +129,7 @@ const fillMovieCard = async function(movieTable, body){
 
 
 }
+
+newMovieButton.addEventListener('click', ()=>{
+    window.location.href = '../pages/create_movie.html'
+})

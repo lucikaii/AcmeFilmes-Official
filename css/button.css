@@ -93,3 +93,14 @@
     background: var(--green);
     color: var(--white);
 }
+.new-movie-button{
+    height: 50px;
+    width: 150px;
+    background-color: var(--purple);
+    color: var(--white);
+    font-family: var(--fredoka);
+    border: 0;
+    border-radius: 8px;
+    align-self: center;
+    justify-self: center;
+}

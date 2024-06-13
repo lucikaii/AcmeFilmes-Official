@@ -23,6 +23,7 @@
 <body>
     <div id="popup" class="popup">
         <div class="info-box">
+            <h1 id="movie-title">Ponyo</h1>
             <input id="nome" type="text" placeholder="Nome">
             <input id="sinopse" type="text" placeholder="Duração">
             <input id="duracao" type="text" placeholder="Duração">
@@ -32,7 +33,7 @@
             <input id="classificacao" type="text" placeholder="Classificação">
             <input id="foto_capa" type="text" placeholder="Foto da capa">
             <div class="button-side-popup">
-                <button class="cancel-button">Cancelar</button>
+                <button class="cancel-button" id="cancel-button">Cancelar</button>
                 <button class="save-button" id="save-button">Salvar</button>
             </div>
         </div>
@@ -57,5 +58,8 @@
     <main>
         <div class="movie-table" id="movie-table"></div>
     </main>
+    <div class="new-movie-side">
+        <button class="new-movie-button" id="new-movie-button">Adicionar filme</button>
+    </div>
 </body>
 </html>

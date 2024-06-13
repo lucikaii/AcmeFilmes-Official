@@ -2,7 +2,7 @@
 
 import { setMovie  } from '../js/api_import.js'
 const saveButton = document.getElementById('save-button')
-
+const cancelButton = document.getElementById('cancel-button')
 
 
 const saveMovie = async function(){
@@ -27,9 +27,10 @@ const saveMovie = async function(){
         foto_capa: fotocapaInput
     }
 
-    const response = await setMovie(movieJson)
+    const response = await setMovie(movieJso)
     if(response){
         alert('Filme criado com sucesso')
+        window.location.href = '../pages/cms.html'
     } else{
         alert('Erro ao criar')
     }
@@ -37,3 +38,6 @@ const saveMovie = async function(){
 }
 
 saveButton.addEventListener('click', saveMovie)
+cancelButton.addEventListener('click', ()=>{
+    window.location.href = '../pages/cms.html'
+})

@@ -29,7 +29,10 @@ export async function getMovieByName(movieName){
 export async function deleteMovie(id){
 
     const url = `https://acmefilmes-zhei.onrender.com/v2/acmefilmes/filme/${id}`
-    const response = await fetch(url)
+    const options = {
+        method: 'DELETE'
+    }
+    const response = await fetch(url, options)
     const data = await response.json()
     return data
 }

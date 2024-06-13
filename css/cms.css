@@ -82,3 +82,11 @@ span{
     display: flex;
     gap: 15px;
 }
+.new-movie-side{
+    height: 200px;
+    width: 300px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    display: grid;
+}
